@@ -1,0 +1,138 @@
+<div class="container-xl">
+    <div class="table-responsive">
+        <div class="table-wrapper">
+
+            <table class="table table-striped table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each categorys }}
+                    <tr>
+                        <td>{{ name }}</td>
+                        <td>{{ description }}</td>
+                        <td>
+                            <!-- Sử dụng class cụ thể của Bootstrap Icons cho biểu tượng view -->
+                            <!-- Sử dụng class cụ thể của Bootstrap Icons cho biểu tượng edit -->
+                            <a href="/category/edit/{{ _id }}" class="btn btn-sm btn-warning" title="Edit"
+                                data-toggle="tooltip">Edit
+                                
+                            </a>
+
+                            <!-- Sử dụng class cụ thể của Bootstrap Icons cho biểu tượng trash -->
+                            <a href="/category/delete/{{_id}}" class="btn btn-sm btn-danger" title="Delete"
+                                data-toggle="tooltip" onclick="return confirm('Are you sure to delete this category ?');">
+                                Delete
+                            </a>
+                        </td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+            <div class="clearfix">
+                <div class="hint-text"></div>
+                <ul class="pagination">
+                    <li class="page-item disabled"><a href="#"><i class="bi bi-chevron-double-left"></i></a></li>
+                    <li class="page-item"><a href="#" class="page-link">1</a></li>
+                    <li class="page-item"><a href="#" class="page-link">2</a></li>
+                    <li class="page-item active"><a href="#" class="page-link">3</a></li>
+                    <li class="page-item"><a href="#" class="page-link">4</a></li>
+                    <li class="page-item"><a href="#" class="page-link">5</a></li>
+                    {{!-- <li class="page-item"><a href="#" class="page-link"><i class="bi bi-chevron-double-right"></i></a> --}}
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+            <div class="text-center">
+    <!-- ... Các phần tử khác ... -->
+    <a href="/category/add" class="btn btn-info" role="button">Add New Category</a>
+</div>
+<style>
+    /* Button style */
+    
+    .btn-info {
+        background-color: #17a2b8;
+        color: #fff;
+        border: none;
+    }
+
+    /* Container style */
+    .container-xl {
+        margin-top: 20px;
+    }
+
+    /* Table style */
+    .table-wrapper {
+        overflow-x: auto;
+    }
+
+    .table-title {
+        padding-bottom: 15px;
+    }
+
+    .search-box {
+        margin-top: 10px;
+    }
+
+    .search-box input[type="search"] {
+        width: 200px;
+    }
+
+    /* Table responsive style */
+    .table-responsive {
+        overflow: hidden;
+    }
+
+    /* Table striped style */
+    .table-striped tbody tr:nth-of-type(odd) {
+        background-color: #f9f9f9;
+    }
+
+    /* Table hover style */
+    .table-hover tbody tr:hover {
+        background-color: #e6f7ff;
+    }
+
+    /* Table bordered style */
+    .table-bordered {
+        border: 1px solid #dee2e6;
+    }
+
+    /* Pagination style */
+    .pagination {
+        justify-content: center;
+        margin-top: 15px;
+    }
+
+    .pagination .page-item.active .page-link {
+        background-color: #17a2b8;
+        border-color: #17a2b8;
+    }
+
+    {{!-- .pagination .page-link {
+        color: #17a2b8;
+    } --}}
+
+    .pagination .page-link:hover {
+        color: #0056b3;
+    }
+
+    .pagination .page-item.disabled .page-link {
+        color: #6c757d;
+        pointer-events: none;
+        cursor: not-allowed;
+    }
+
+    /* Additional style for the "Add new mobile" link */
+.btn-info {
+    /* margin-bottom: 15px; */
+    margin: 0px 227px 0px 230px;
+}
+</style>

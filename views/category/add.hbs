@@ -1,0 +1,73 @@
+
+<form action="/category/add" method="post" class="form-horizontal">
+    <div data-mdb-input-init class="form-outline mb-4">
+        <label class="form-label" for="form6Example3">Name</label>
+        <input type="text" id="" name="name" class="form-control" />
+    </div>
+    <!-- Message input -->
+    <div data-mdb-input-init class="form-outline mb-4">
+        <label class="form-label" for="form6Example7">Description</label>
+        <textarea class="form-control" id="" name="description" rows="4"></textarea>
+    </div>
+
+    <!-- Submit button -->
+    <button data-mdb-ripple-init type="submit" class="btn btn-primary btn-block mb-4">Create new category</button>
+</form>
+
+<style>
+/* Form styling */
+/* Optional: Add custom styles here */
+select {
+    width: 140px;
+    height: 35px;
+    margin: 18px 95px 0px 3px;
+    border-radius: 8px;
+}
+/* Form styling */
+form.form-horizontal {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd; /* Optional: Add border for a clean look */
+    border-radius: 10px;
+    background-color: #667d924f; /* Form background color */
+    margin-bottom: 160px;
+    margin-top: 70px;
+}
+
+/* Form input styling */
+.form-outline {
+    margin-bottom: 1.5rem;
+}
+
+/* Label styling */
+.form-label {
+    margin-bottom: 0.5rem;
+    color: #007bff; /* Text color */
+}
+
+/* Input styling */
+.form-control {
+    font-size: 1rem;
+    border-color: #007bff; /* Input border color */
+}
+
+/* Textarea styling */
+textarea.form-control {
+    resize: vertical;
+}
+
+/* Button styling */
+.btn-primary {
+    background-color: #007bff; /* Primary button color */
+    color: #fff; /* Button text color */
+    border: 1px solid #007bff; /* Border color */
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Hover state color */
+    border: 1px solid #0056b3; /* Hover state border color */
+}
+
+</style>
